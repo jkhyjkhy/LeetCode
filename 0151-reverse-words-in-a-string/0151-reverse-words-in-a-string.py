@@ -3,5 +3,5 @@ class Solution:
         v = s.split()
         v.reverse()
         
-        return ' '.join(v).strip()
+        return ' '.join(v)
 
