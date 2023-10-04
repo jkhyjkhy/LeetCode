@@ -7,4 +7,5 @@ class Solution:
             
             if remains in index:
                 return [index[remains]+1, i+1]
-            index[a] = i
+            else:
+                index[a] = i
