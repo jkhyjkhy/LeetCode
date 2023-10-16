@@ -1,13 +1,12 @@
 class Solution:
     def spiralOrder(self, matrix: List[List[int]]) -> List[int]:
-        # 반시계로 돌려가며 pop(0)을 한다면
+        # 기존 코드의 최적화 버전
         
         result = []
         while matrix:
-            spiral_matrix = matrix[0]
-            matrix.pop(0)
-            transposed = list(zip(*matrix))
-            matrix = transposed[::-1]
-            result += spiral_matrix
+            result += matrix.pop(0)
+            if not matrix:
+                return(result)
+            matrix = list(zip(*matrix))[::-1]
         
-        return(result)
+        
